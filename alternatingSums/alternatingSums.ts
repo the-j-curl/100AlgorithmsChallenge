@@ -3,7 +3,7 @@ export function alternatingSums(a: number[]): number[] {
 	let oddTotal = 0
 	a.forEach((number, index) => {
 		if (index % 2 === 0) {
-			evenTotal = evenTotal += number
+			evenTotal += number
 		} else {
 			oddTotal += number
 		}
