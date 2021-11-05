@@ -1,8 +1,10 @@
 export function domainType(domains: string[]): string[] {
 	const domainTypes: string[] = []
+
 	domains.forEach(string => {
 		const startPoint = string.lastIndexOf('.')
 		const currentDomain = string.substr(startPoint)
+
 		switch (currentDomain) {
 			case '.org':
 				domainTypes.push('organization')
@@ -18,6 +20,7 @@ export function domainType(domains: string[]): string[] {
 				break
 		}
 	})
+
 	return domainTypes
 }
 
