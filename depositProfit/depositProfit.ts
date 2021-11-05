@@ -6,7 +6,7 @@ export function depositProfit(
 	let years: number = 0
 	let balance = deposit
 
-	while (threshold > balance) {
+	while (threshold >= balance) {
 		balance += balance * (rate / 100)
 		years++
 	}
