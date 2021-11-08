@@ -3,19 +3,19 @@ export function domainType(domains: string[]): string[] {
 
 	domains.forEach(string => {
 		const startPoint = string.lastIndexOf('.')
-		const currentDomain = string.substr(startPoint)
+		const currentDomain = string.substr(startPoint + 1)
 
 		switch (currentDomain) {
-			case '.org':
+			case 'org':
 				domainTypes.push('organization')
 				break
-			case '.com':
+			case 'com':
 				domainTypes.push('commercial')
 				break
-			case '.net':
+			case 'net':
 				domainTypes.push('network')
 				break
-			case '.info':
+			case 'info':
 				domainTypes.push('information')
 				break
 		}
