@@ -1,7 +1,8 @@
-export function isCaseInsensitivePalindrome(inputString: string): boolean {
-	const lowerCaseInput = inputString.toLowerCase()
-	const reversedInput = lowerCaseInput.split('').reverse().join('')
-	return lowerCaseInput === reversedInput
+export const isCaseInsensitivePalindrome = (inputString: string): boolean => {
+	return (
+		inputString.split('').reverse().join('').toLowerCase() ===
+		inputString.toLocaleLowerCase()
+	)
 }
 
 console.log(isCaseInsensitivePalindrome('AaBaa'))
